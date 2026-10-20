@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library | StoryNest</title>
+  <meta name="description" content="Browse all 30 original single-chapter stories by genre.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">&#128214;</span> StoryNest</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">&#9776;</button>
+    <nav id="mainNav" class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="library.html" aria-current="page" class="active">Library</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch dark or light mode">&#127769; Dark</button>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="page-title">
+    <h1>The Library</h1>
+    <p class="lead">30 original stories, one chapter each. Search, filter, and choose your next read.</p>
+  </section>
+  <section class="toolbar" aria-label="Search and filter books">
+    <label class="field"><span class="sr-only">Search stories</span>
+      <input type="search" id="searchInput" placeholder="Search by title or author..." autocomplete="off"></label>
+    <label class="field"><span class="sr-only">Filter by genre</span>
+      <select id="genreFilter"><option value="all">All genres</option><option value="Adventure">Adventure</option><option value="Comedy">Comedy</option><option value="Coming-of-Age">Coming-of-Age</option><option value="Crime">Crime</option><option value="Cyberpunk">Cyberpunk</option><option value="Detective Noir">Detective Noir</option><option value="Drama">Drama</option><option value="Dystopian">Dystopian</option><option value="Fable">Fable</option><option value="Fairy Tale">Fairy Tale</option><option value="Fantasy">Fantasy</option><option value="Folklore">Folklore</option><option value="Gothic">Gothic</option><option value="Historical Fiction">Historical Fiction</option><option value="Horror">Horror</option><option value="Magical Realism">Magical Realism</option><option value="Mystery">Mystery</option><option value="Mythology">Mythology</option><option value="Paranormal">Paranormal</option><option value="Post-Apocalyptic">Post-Apocalyptic</option><option value="Romance">Romance</option><option value="Science Fiction">Science Fiction</option><option value="Slice of Life">Slice of Life</option><option value="Space Opera">Space Opera</option><option value="Sports">Sports</option><option value="Steampunk">Steampunk</option><option value="Superhero">Superhero</option><option value="Supernatural">Supernatural</option><option value="Thriller">Thriller</option><option value="Western">Western</option></select></label>
+    <button class="btn btn-ghost" id="showLiked" type="button" aria-pressed="false">&#9829; Liked only</button>
+    <p class="result-count" id="resultCount" aria-live="polite">Showing 30 of 30 stories</p>
+  </section>
+  <section class="section tight" aria-label="Book list">
+    <div class="book-grid" id="bookGrid">
+      <article class="book-card" data-genre="Fantasy" data-title="the lantern keeper of elderfen" data-author="mara quillon" data-id="01"
+  data-synopsis="Twelve-year-old Wren tends the marsh lantern that holds back the Hollow Mist, until the flame speaks and tells her what the mist really wants." data-href="stories/story-01-the-lantern-keeper-of-elderfen.html" data-cover="images/covers/cover-01.svg" data-name="The Lantern Keeper of Elderfen" data-by="Mara Quillon" data-genre-label="Fantasy" data-chapter="The Last Light of Elderfen">
+  <div class="book-cover"><img src="images/covers/cover-01.svg" alt="Cover of The Lantern Keeper of Elderfen" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="01" aria-pressed="false" aria-label="Like The Lantern Keeper of Elderfen">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Fantasy</span>
+    <h3 class="book-title">The Lantern Keeper of Elderfen</h3>
+    <p class="book-author">by Mara Quillon</p>
+    <p class="book-synopsis">Twelve-year-old Wren tends the marsh lantern that holds back the Hollow Mist, until the flame speaks and tells her what the mist really wants.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-01-the-lantern-keeper-of-elderfen.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="01">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Science Fiction" data-title="signal from kepler-9" data-author="idris valemont" data-id="02"
+  data-synopsis="Lone communications officer Tala Okonkwo receives a message from a planet that was supposed to be empty. It is written in her own handwriting." data-href="stories/story-02-signal-from-kepler-9.html" data-cover="images/covers/cover-02.svg" data-name="Signal from Kepler-9" data-by="Idris Valemont" data-genre-label="Science Fiction" data-chapter="Eleven Minutes of Static">
+  <div class="book-cover"><img src="images/covers/cover-02.svg" alt="Cover of Signal from Kepler-9" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="02" aria-pressed="false" aria-label="Like Signal from Kepler-9">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Science Fiction</span>
+    <h3 class="book-title">Signal from Kepler-9</h3>
+    <p class="book-author">by Idris Valemont</p>
+    <p class="book-synopsis">Lone communications officer Tala Okonkwo receives a message from a planet that was supposed to be empty. It is written in her own handwriting.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-02-signal-from-kepler-9.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="02">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Romance" data-title="two umbrellas, one rainy street" data-author="lena marisol" data-id="03"
+  data-synopsis="Every rainy Thursday, Ines and Theo share the same bus stop and pretend not to notice each other, until the day only one umbrella survives the storm." data-href="stories/story-03-two-umbrellas-one-rainy-street.html" data-cover="images/covers/cover-03.svg" data-name="Two Umbrellas, One Rainy Street" data-by="Lena Marisol" data-genre-label="Romance" data-chapter="Thursday, Bus Stop 14">
+  <div class="book-cover"><img src="images/covers/cover-03.svg" alt="Cover of Two Umbrellas, One Rainy Street" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="03" aria-pressed="false" aria-label="Like Two Umbrellas, One Rainy Street">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Romance</span>
+    <h3 class="book-title">Two Umbrellas, One Rainy Street</h3>
+    <p class="book-author">by Lena Marisol</p>
+    <p class="book-synopsis">Every rainy Thursday, Ines and Theo share the same bus stop and pretend not to notice each other, until the day only one umbrella survives the storm.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-03-two-umbrellas-one-rainy-street.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="03">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Mystery" data-title="the missing page" data-author="oren blackwood" data-id="04"
+  data-synopsis="When page 114 vanishes from the town library&#x27;s only copy of a centuries-old diary, young librarian Pia must find out who needed it gone." data-href="stories/story-04-the-missing-page.html" data-cover="images/covers/cover-04.svg" data-name="The Missing Page" data-by="Oren Blackwood" data-genre-label="Mystery" data-chapter="Page One Hundred and Fourteen">
+  <div class="book-cover"><img src="images/covers/cover-04.svg" alt="Cover of The Missing Page" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="04" aria-pressed="false" aria-label="Like The Missing Page">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Mystery</span>
+    <h3 class="book-title">The Missing Page</h3>
+    <p class="book-author">by Oren Blackwood</p>
+    <p class="book-synopsis">When page 114 vanishes from the town library&#x27;s only copy of a centuries-old diary, young librarian Pia must find out who needed it gone.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-04-the-missing-page.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="04">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Horror" data-title="the last bus home" data-author="vera nightingale" data-id="05"
+  data-synopsis="Mika catches the final bus after a late shift. Every stop it makes is a place she has never seen, and the other passengers keep looking at her as if they know her." data-href="stories/story-05-the-last-bus-home.html" data-cover="images/covers/cover-05.svg" data-name="The Last Bus Home" data-by="Vera Nightingale" data-genre-label="Horror" data-chapter="Route 13, Final Service">
+  <div class="book-cover"><img src="images/covers/cover-05.svg" alt="Cover of The Last Bus Home" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="05" aria-pressed="false" aria-label="Like The Last Bus Home">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Horror</span>
+    <h3 class="book-title">The Last Bus Home</h3>
+    <p class="book-author">by Vera Nightingale</p>
+    <p class="book-synopsis">Mika catches the final bus after a late shift. Every stop it makes is a place she has never seen, and the other passengers keep looking at her as if they know her.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-05-the-last-bus-home.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="05">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Thriller" data-title="forty minutes to midnight" data-author="dante holloway" data-id="06"
+  data-synopsis="A train engineer receives an anonymous message: a bomb is on board, and the only person who can stop it is the one passenger he has never met." data-href="stories/story-06-forty-minutes-to-midnight.html" data-cover="images/covers/cover-06.svg" data-name="Forty Minutes to Midnight" data-by="Dante Holloway" data-genre-label="Thriller" data-chapter="Platform Nine">
+  <div class="book-cover"><img src="images/covers/cover-06.svg" alt="Cover of Forty Minutes to Midnight" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="06" aria-pressed="false" aria-label="Like Forty Minutes to Midnight">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Thriller</span>
+    <h3 class="book-title">Forty Minutes to Midnight</h3>
+    <p class="book-author">by Dante Holloway</p>
+    <p class="book-synopsis">A train engineer receives an anonymous message: a bomb is on board, and the only person who can stop it is the one passenger he has never met.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-06-forty-minutes-to-midnight.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="06">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Adventure" data-title="compass of the coral coast" data-author="kai navarro" data-id="07"
+  data-synopsis="Siblings Nico and Bea inherit a broken compass that points not north, but toward whatever you miss the most. Their search leads to a drowned lighthouse." data-href="stories/story-07-compass-of-the-coral-coast.html" data-cover="images/covers/cover-07.svg" data-name="Compass of the Coral Coast" data-by="Kai Navarro" data-genre-label="Adventure" data-chapter="The Needle That Pointed Home">
+  <div class="book-cover"><img src="images/covers/cover-07.svg" alt="Cover of Compass of the Coral Coast" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="07" aria-pressed="false" aria-label="Like Compass of the Coral Coast">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Adventure</span>
+    <h3 class="book-title">Compass of the Coral Coast</h3>
+    <p class="book-author">by Kai Navarro</p>
+    <p class="book-synopsis">Siblings Nico and Bea inherit a broken compass that points not north, but toward whatever you miss the most. Their search leads to a drowned lighthouse.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-07-compass-of-the-coral-coast.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="07">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Historical Fiction" data-title="letters from the harbor, 1898" data-author="isabela reyes-cruz" data-id="08"
+  data-synopsis="In the turbulent summer of 1898, a young telegraph clerk in Manila secretly copies messages that could save a neighbor&#x27;s family." data-href="stories/story-08-letters-from-the-harbor-1898.html" data-cover="images/covers/cover-08.svg" data-name="Letters from the Harbor, 1898" data-by="Isabela Reyes-Cruz" data-genre-label="Historical Fiction" data-chapter="The Clerk at Desk Six">
+  <div class="book-cover"><img src="images/covers/cover-08.svg" alt="Cover of Letters from the Harbor, 1898" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="08" aria-pressed="false" aria-label="Like Letters from the Harbor, 1898">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Historical Fiction</span>
+    <h3 class="book-title">Letters from the Harbor, 1898</h3>
+    <p class="book-author">by Isabela Reyes-Cruz</p>
+    <p class="book-synopsis">In the turbulent summer of 1898, a young telegraph clerk in Manila secretly copies messages that could save a neighbor&#x27;s family.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-08-letters-from-the-harbor-1898.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="08">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Comedy" data-title="the karaoke machine that wouldn&#x27;t quit" data-author="joy mendoza" data-id="09"
+  data-synopsis="At Tita Nena&#x27;s birthday party, the old karaoke machine refuses to stop, picks every song itself, and seems determined to expose everyone&#x27;s secrets." data-href="stories/story-09-the-karaoke-machine-that-wouldn-t-quit.html" data-cover="images/covers/cover-09.svg" data-name="The Karaoke Machine That Wouldn&#x27;t Quit" data-by="Joy Mendoza" data-genre-label="Comedy" data-chapter="Hit It, Tita!">
+  <div class="book-cover"><img src="images/covers/cover-09.svg" alt="Cover of The Karaoke Machine That Wouldn&#x27;t Quit" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="09" aria-pressed="false" aria-label="Like The Karaoke Machine That Wouldn&#x27;t Quit">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Comedy</span>
+    <h3 class="book-title">The Karaoke Machine That Wouldn&#x27;t Quit</h3>
+    <p class="book-author">by Joy Mendoza</p>
+    <p class="book-synopsis">At Tita Nena&#x27;s birthday party, the old karaoke machine refuses to stop, picks every song itself, and seems determined to expose everyone&#x27;s secrets.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-09-the-karaoke-machine-that-wouldn-t-quit.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="09">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Drama" data-title="empty chairs at sunday dinner" data-author="marguerite doyle" data-id="10"
+  data-synopsis="Three years after their father&#x27;s passing, the Alvarez siblings gather for a Sunday dinner no one wants to host, and the real conversation begins with the last place setting." data-href="stories/story-10-empty-chairs-at-sunday-dinner.html" data-cover="images/covers/cover-10.svg" data-name="Empty Chairs at Sunday Dinner" data-by="Marguerite Doyle" data-genre-label="Drama" data-chapter="The Fourth Chair">
+  <div class="book-cover"><img src="images/covers/cover-10.svg" alt="Cover of Empty Chairs at Sunday Dinner" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="10" aria-pressed="false" aria-label="Like Empty Chairs at Sunday Dinner">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Drama</span>
+    <h3 class="book-title">Empty Chairs at Sunday Dinner</h3>
+    <p class="book-author">by Marguerite Doyle</p>
+    <p class="book-synopsis">Three years after their father&#x27;s passing, the Alvarez siblings gather for a Sunday dinner no one wants to host, and the real conversation begins with the last place setting.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-10-empty-chairs-at-sunday-dinner.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="10">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Dystopian" data-title="the quiet ration" data-author="silas crowe" data-id="11"
+  data-synopsis="In a city where every spoken word is counted and taxed, a clerk named Odel discovers that his daily ration of one hundred words is no longer enough." data-href="stories/story-11-the-quiet-ration.html" data-cover="images/covers/cover-11.svg" data-name="The Quiet Ration" data-by="Silas Crowe" data-genre-label="Dystopian" data-chapter="Ninety-Nine Words">
+  <div class="book-cover"><img src="images/covers/cover-11.svg" alt="Cover of The Quiet Ration" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="11" aria-pressed="false" aria-label="Like The Quiet Ration">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Dystopian</span>
+    <h3 class="book-title">The Quiet Ration</h3>
+    <p class="book-author">by Silas Crowe</p>
+    <p class="book-synopsis">In a city where every spoken word is counted and taxed, a clerk named Odel discovers that his daily ration of one hundred words is no longer enough.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-11-the-quiet-ration.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="11">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Paranormal" data-title="my roommate is a ghost" data-author="tessa moon" data-id="12"
+  data-synopsis="College sophomore Jade finally finds a cheap apartment, only to discover her roommate has been dead since 1974 and has strong opinions about her dishes." data-href="stories/story-12-my-roommate-is-a-ghost.html" data-cover="images/covers/cover-12.svg" data-name="My Roommate Is a Ghost" data-by="Tessa Moon" data-genre-label="Paranormal" data-chapter="The Rent Is Suspiciously Cheap">
+  <div class="book-cover"><img src="images/covers/cover-12.svg" alt="Cover of My Roommate Is a Ghost" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="12" aria-pressed="false" aria-label="Like My Roommate Is a Ghost">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Paranormal</span>
+    <h3 class="book-title">My Roommate Is a Ghost</h3>
+    <p class="book-author">by Tessa Moon</p>
+    <p class="book-synopsis">College sophomore Jade finally finds a cheap apartment, only to discover her roommate has been dead since 1974 and has strong opinions about her dishes.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-12-my-roommate-is-a-ghost.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="12">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Fairy Tale" data-title="the princess who collected thunder" data-author="rowan hartley" data-id="13"
+  data-synopsis="Princess Liora is told that princesses must be quiet and gentle, so she secretly fills jars with thunder, and learns what a roar is for." data-href="stories/story-13-the-princess-who-collected-thunder.html" data-cover="images/covers/cover-13.svg" data-name="The Princess Who Collected Thunder" data-by="Rowan Hartley" data-genre-label="Fairy Tale" data-chapter="A Jar for Every Storm">
+  <div class="book-cover"><img src="images/covers/cover-13.svg" alt="Cover of The Princess Who Collected Thunder" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="13" aria-pressed="false" aria-label="Like The Princess Who Collected Thunder">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Fairy Tale</span>
+    <h3 class="book-title">The Princess Who Collected Thunder</h3>
+    <p class="book-author">by Rowan Hartley</p>
+    <p class="book-synopsis">Princess Liora is told that princesses must be quiet and gentle, so she secretly fills jars with thunder, and learns what a roar is for.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-13-the-princess-who-collected-thunder.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="13">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Mythology" data-title="the wind that remembered names" data-author="alaric dumalag" data-id="14"
+  data-synopsis="In an island myth retold anew, a wind spirit keeps the names of every sailor lost at sea, until a stubborn girl asks her to give one back." data-href="stories/story-14-the-wind-that-remembered-names.html" data-cover="images/covers/cover-14.svg" data-name="The Wind That Remembered Names" data-by="Alaric Dumalag" data-genre-label="Mythology" data-chapter="The Spirit of the Northern Breeze">
+  <div class="book-cover"><img src="images/covers/cover-14.svg" alt="Cover of The Wind That Remembered Names" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="14" aria-pressed="false" aria-label="Like The Wind That Remembered Names">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Mythology</span>
+    <h3 class="book-title">The Wind That Remembered Names</h3>
+    <p class="book-author">by Alaric Dumalag</p>
+    <p class="book-synopsis">In an island myth retold anew, a wind spirit keeps the names of every sailor lost at sea, until a stubborn girl asks her to give one back.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-14-the-wind-that-remembered-names.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="14">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Western" data-title="dust at redrock junction" data-author="cole harlan" data-id="15"
+  data-synopsis="A tired sheriff, a missing water wagon, and one hot afternoon decide whether Redrock Junction survives the summer." data-href="stories/story-15-dust-at-redrock-junction.html" data-cover="images/covers/cover-15.svg" data-name="Dust at Redrock Junction" data-by="Cole Harlan" data-genre-label="Western" data-chapter="High Noon, Low Water">
+  <div class="book-cover"><img src="images/covers/cover-15.svg" alt="Cover of Dust at Redrock Junction" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="15" aria-pressed="false" aria-label="Like Dust at Redrock Junction">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Western</span>
+    <h3 class="book-title">Dust at Redrock Junction</h3>
+    <p class="book-author">by Cole Harlan</p>
+    <p class="book-synopsis">A tired sheriff, a missing water wagon, and one hot afternoon decide whether Redrock Junction survives the summer.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-15-dust-at-redrock-junction.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="15">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Steampunk" data-title="the clockwork cartographer" data-author="ada fenwick" data-id="16"
+  data-synopsis="Inventor&#x27;s apprentice Tilly builds a brass mapmaking automaton, only to find it has been drawing a city that does not exist, yet." data-href="stories/story-16-the-clockwork-cartographer.html" data-cover="images/covers/cover-16.svg" data-name="The Clockwork Cartographer" data-by="Ada Fenwick" data-genre-label="Steampunk" data-chapter="Gears and Grid Lines">
+  <div class="book-cover"><img src="images/covers/cover-16.svg" alt="Cover of The Clockwork Cartographer" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="16" aria-pressed="false" aria-label="Like The Clockwork Cartographer">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Steampunk</span>
+    <h3 class="book-title">The Clockwork Cartographer</h3>
+    <p class="book-author">by Ada Fenwick</p>
+    <p class="book-synopsis">Inventor&#x27;s apprentice Tilly builds a brass mapmaking automaton, only to find it has been drawing a city that does not exist, yet.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-16-the-clockwork-cartographer.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="16">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Cyberpunk" data-title="neon ghosts of sector 7" data-author="jinx okafor" data-id="17"
+  data-synopsis="Courier and street hacker Kiro is hired to deliver a memory chip across Sector 7, and the memory on it is her own." data-href="stories/story-17-neon-ghosts-of-sector-7.html" data-cover="images/covers/cover-17.svg" data-name="Neon Ghosts of Sector 7" data-by="Jinx Okafor" data-genre-label="Cyberpunk" data-chapter="Packet Loss">
+  <div class="book-cover"><img src="images/covers/cover-17.svg" alt="Cover of Neon Ghosts of Sector 7" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="17" aria-pressed="false" aria-label="Like Neon Ghosts of Sector 7">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Cyberpunk</span>
+    <h3 class="book-title">Neon Ghosts of Sector 7</h3>
+    <p class="book-author">by Jinx Okafor</p>
+    <p class="book-synopsis">Courier and street hacker Kiro is hired to deliver a memory chip across Sector 7, and the memory on it is her own.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-17-neon-ghosts-of-sector-7.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="17">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Slice of Life" data-title="the corner bakery at 5 a.m." data-author="hana sato" data-id="18"
+  data-synopsis="Before the city wakes, a baker, a delivery boy, and a stray cat share the quietest hour of the day over warm bread." data-href="stories/story-18-the-corner-bakery-at-5-a-m.html" data-cover="images/covers/cover-18.svg" data-name="The Corner Bakery at 5 A.M." data-by="Hana Sato" data-genre-label="Slice of Life" data-chapter="Flour and First Light">
+  <div class="book-cover"><img src="images/covers/cover-18.svg" alt="Cover of The Corner Bakery at 5 A.M." loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="18" aria-pressed="false" aria-label="Like The Corner Bakery at 5 A.M.">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Slice of Life</span>
+    <h3 class="book-title">The Corner Bakery at 5 A.M.</h3>
+    <p class="book-author">by Hana Sato</p>
+    <p class="book-synopsis">Before the city wakes, a baker, a delivery boy, and a stray cat share the quietest hour of the day over warm bread.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-18-the-corner-bakery-at-5-a-m.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="18">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Coming-of-Age" data-title="the summer i learned to swim" data-author="noah bellamy" data-id="19"
+  data-synopsis="Fifteen-year-old Marco is afraid of deep water, and the lake his cousins love is full of it. One summer, he decides to stop watching from the dock." data-href="stories/story-19-the-summer-i-learned-to-swim.html" data-cover="images/covers/cover-19.svg" data-name="The Summer I Learned to Swim" data-by="Noah Bellamy" data-genre-label="Coming-of-Age" data-chapter="The Deep End of July">
+  <div class="book-cover"><img src="images/covers/cover-19.svg" alt="Cover of The Summer I Learned to Swim" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="19" aria-pressed="false" aria-label="Like The Summer I Learned to Swim">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Coming-of-Age</span>
+    <h3 class="book-title">The Summer I Learned to Swim</h3>
+    <p class="book-author">by Noah Bellamy</p>
+    <p class="book-synopsis">Fifteen-year-old Marco is afraid of deep water, and the lake his cousins love is full of it. One summer, he decides to stop watching from the dock.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-19-the-summer-i-learned-to-swim.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="19">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Magical Realism" data-title="the woman who sold weather" data-author="camila torres" data-id="20"
+  data-synopsis="In a dusty plaza, Doña Alma sells jars of weather, a spoonful of drizzle, a pocket of sunshine, but never to anyone who wants to hide from their own feelings." data-href="stories/story-20-the-woman-who-sold-weather.html" data-cover="images/covers/cover-20.svg" data-name="The Woman Who Sold Weather" data-by="Camila Torres" data-genre-label="Magical Realism" data-chapter="A Pinch of Rain">
+  <div class="book-cover"><img src="images/covers/cover-20.svg" alt="Cover of The Woman Who Sold Weather" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="20" aria-pressed="false" aria-label="Like The Woman Who Sold Weather">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Magical Realism</span>
+    <h3 class="book-title">The Woman Who Sold Weather</h3>
+    <p class="book-author">by Camila Torres</p>
+    <p class="book-synopsis">In a dusty plaza, Doña Alma sells jars of weather, a spoonful of drizzle, a pocket of sunshine, but never to anyone who wants to hide from their own feelings.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-20-the-woman-who-sold-weather.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="20">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Superhero" data-title="nightlight" data-author="marcus reed" data-id="21"
+  data-synopsis="Ten-year-old Dev is scared of the dark, so naturally he gains the power to glow, and the city&#x27;s blackout needs him badly." data-href="stories/story-21-nightlight.html" data-cover="images/covers/cover-21.svg" data-name="Nightlight" data-by="Marcus Reed" data-genre-label="Superhero" data-chapter="Lights Out, Lights On">
+  <div class="book-cover"><img src="images/covers/cover-21.svg" alt="Cover of Nightlight" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="21" aria-pressed="false" aria-label="Like Nightlight">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Superhero</span>
+    <h3 class="book-title">Nightlight</h3>
+    <p class="book-author">by Marcus Reed</p>
+    <p class="book-synopsis">Ten-year-old Dev is scared of the dark, so naturally he gains the power to glow, and the city&#x27;s blackout needs him badly.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-21-nightlight.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="21">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Post-Apocalyptic" data-title="seeds in the ash" data-author="ember walsh" data-id="22"
+  data-synopsis="Thirteen years after the Collapse, a scavenger named Ysa finds a single sealed packet of seeds and has to decide whether to sell it or plant it." data-href="stories/story-22-seeds-in-the-ash.html" data-cover="images/covers/cover-22.svg" data-name="Seeds in the Ash" data-by="Ember Walsh" data-genre-label="Post-Apocalyptic" data-chapter="One Packet, One Chance">
+  <div class="book-cover"><img src="images/covers/cover-22.svg" alt="Cover of Seeds in the Ash" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="22" aria-pressed="false" aria-label="Like Seeds in the Ash">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Post-Apocalyptic</span>
+    <h3 class="book-title">Seeds in the Ash</h3>
+    <p class="book-author">by Ember Walsh</p>
+    <p class="book-synopsis">Thirteen years after the Collapse, a scavenger named Ysa finds a single sealed packet of seeds and has to decide whether to sell it or plant it.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-22-seeds-in-the-ash.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="22">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Detective Noir" data-title="rain never lies in harbor city" data-author="frank delacroix" data-id="23"
+  data-synopsis="Private eye Sam Quill takes one last case from a client who pays in damp cash and a name he has not heard in ten years." data-href="stories/story-23-rain-never-lies-in-harbor-city.html" data-cover="images/covers/cover-23.svg" data-name="Rain Never Lies in Harbor City" data-by="Frank Delacroix" data-genre-label="Detective Noir" data-chapter="The Dame in the Downpour">
+  <div class="book-cover"><img src="images/covers/cover-23.svg" alt="Cover of Rain Never Lies in Harbor City" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="23" aria-pressed="false" aria-label="Like Rain Never Lies in Harbor City">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Detective Noir</span>
+    <h3 class="book-title">Rain Never Lies in Harbor City</h3>
+    <p class="book-author">by Frank Delacroix</p>
+    <p class="book-synopsis">Private eye Sam Quill takes one last case from a client who pays in damp cash and a name he has not heard in ten years.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-23-rain-never-lies-in-harbor-city.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="23">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Supernatural" data-title="the door in the orchard" data-author="eliza thorne" data-id="24"
+  data-synopsis="When Isa inherits her grandmother&#x27;s orchard, she finds a door standing alone between two apple trees, and it opens a little wider each night." data-href="stories/story-24-the-door-in-the-orchard.html" data-cover="images/covers/cover-24.svg" data-name="The Door in the Orchard" data-by="Eliza Thorne" data-genre-label="Supernatural" data-chapter="Between the Apple Trees">
+  <div class="book-cover"><img src="images/covers/cover-24.svg" alt="Cover of The Door in the Orchard" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="24" aria-pressed="false" aria-label="Like The Door in the Orchard">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Supernatural</span>
+    <h3 class="book-title">The Door in the Orchard</h3>
+    <p class="book-author">by Eliza Thorne</p>
+    <p class="book-synopsis">When Isa inherits her grandmother&#x27;s orchard, she finds a door standing alone between two apple trees, and it opens a little wider each night.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-24-the-door-in-the-orchard.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="24">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Sports" data-title="last lap on fourth street" data-author="rico salazar" data-id="25"
+  data-synopsis="Cross-country runner Bea has one chance left to beat her rival, and a sprained ankle that says otherwise." data-href="stories/story-25-last-lap-on-fourth-street.html" data-cover="images/covers/cover-25.svg" data-name="Last Lap on Fourth Street" data-by="Rico Salazar" data-genre-label="Sports" data-chapter="The Final Four Hundred Meters">
+  <div class="book-cover"><img src="images/covers/cover-25.svg" alt="Cover of Last Lap on Fourth Street" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="25" aria-pressed="false" aria-label="Like Last Lap on Fourth Street">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Sports</span>
+    <h3 class="book-title">Last Lap on Fourth Street</h3>
+    <p class="book-author">by Rico Salazar</p>
+    <p class="book-synopsis">Cross-country runner Bea has one chance left to beat her rival, and a sprained ankle that says otherwise.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-25-last-lap-on-fourth-street.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="25">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Crime" data-title="the honest thief" data-author="gideon park" data-id="26"
+  data-synopsis="Master burglar Lou Pereira only steals from people who deserve it, and tonight&#x27;s target has a safe full of someone else&#x27;s secrets." data-href="stories/story-26-the-honest-thief.html" data-cover="images/covers/cover-26.svg" data-name="The Honest Thief" data-by="Gideon Park" data-genre-label="Crime" data-chapter="Nothing Personal">
+  <div class="book-cover"><img src="images/covers/cover-26.svg" alt="Cover of The Honest Thief" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="26" aria-pressed="false" aria-label="Like The Honest Thief">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Crime</span>
+    <h3 class="book-title">The Honest Thief</h3>
+    <p class="book-author">by Gideon Park</p>
+    <p class="book-synopsis">Master burglar Lou Pereira only steals from people who deserve it, and tonight&#x27;s target has a safe full of someone else&#x27;s secrets.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-26-the-honest-thief.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="26">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Folklore" data-title="the tale of the singing rice terraces" data-author="elena dizon" data-id="27"
+  data-synopsis="Mountain villagers say the rice terraces sing at harvest, but only to those who work them with honest hands. One greedy lord wants to hear the song for free." data-href="stories/story-27-the-tale-of-the-singing-rice-terraces.html" data-cover="images/covers/cover-27.svg" data-name="The Tale of the Singing Rice Terraces" data-by="Elena Dizon" data-genre-label="Folklore" data-chapter="The Song Beneath the Water">
+  <div class="book-cover"><img src="images/covers/cover-27.svg" alt="Cover of The Tale of the Singing Rice Terraces" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="27" aria-pressed="false" aria-label="Like The Tale of the Singing Rice Terraces">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Folklore</span>
+    <h3 class="book-title">The Tale of the Singing Rice Terraces</h3>
+    <p class="book-author">by Elena Dizon</p>
+    <p class="book-synopsis">Mountain villagers say the rice terraces sing at harvest, but only to those who work them with honest hands. One greedy lord wants to hear the song for free.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-27-the-tale-of-the-singing-rice-terraces.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="27">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Space Opera" data-title="crown of a thousand suns" data-author="orion ashby" data-id="28"
+  data-synopsis="A teenage deckhand on a smuggler&#x27;s freighter discovers she is the last heir to the Solar Throne, and the empire&#x27;s fleets are already hunting her." data-href="stories/story-28-crown-of-a-thousand-suns.html" data-cover="images/covers/cover-28.svg" data-name="Crown of a Thousand Suns" data-by="Orion Ashby" data-genre-label="Space Opera" data-chapter="The Girl in Cargo Bay Three">
+  <div class="book-cover"><img src="images/covers/cover-28.svg" alt="Cover of Crown of a Thousand Suns" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="28" aria-pressed="false" aria-label="Like Crown of a Thousand Suns">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Space Opera</span>
+    <h3 class="book-title">Crown of a Thousand Suns</h3>
+    <p class="book-author">by Orion Ashby</p>
+    <p class="book-synopsis">A teenage deckhand on a smuggler&#x27;s freighter discovers she is the last heir to the Solar Throne, and the empire&#x27;s fleets are already hunting her.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-28-crown-of-a-thousand-suns.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="28">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Gothic" data-title="the widow of ravenmoor hall" data-author="charlotte vane" data-id="29"
+  data-synopsis="Governess Adelaide arrives at Ravenmoor Hall to teach two silent children, and finds the lady of the house still walks the halls, a year after her funeral." data-href="stories/story-29-the-widow-of-ravenmoor-hall.html" data-cover="images/covers/cover-29.svg" data-name="The Widow of Ravenmoor Hall" data-by="Charlotte Vane" data-genre-label="Gothic" data-chapter="Candlelight and Cold Corridors">
+  <div class="book-cover"><img src="images/covers/cover-29.svg" alt="Cover of The Widow of Ravenmoor Hall" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="29" aria-pressed="false" aria-label="Like The Widow of Ravenmoor Hall">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Gothic</span>
+    <h3 class="book-title">The Widow of Ravenmoor Hall</h3>
+    <p class="book-author">by Charlotte Vane</p>
+    <p class="book-synopsis">Governess Adelaide arrives at Ravenmoor Hall to teach two silent children, and finds the lady of the house still walks the halls, a year after her funeral.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-29-the-widow-of-ravenmoor-hall.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="29">Details</button></div>
+  </div>
+</article><article class="book-card" data-genre="Fable" data-title="the turtle and the tide" data-author="pip whitlock" data-id="30"
+  data-synopsis="A small turtle is mocked for being slow until a great storm shows the beach what patience can do." data-href="stories/story-30-the-turtle-and-the-tide.html" data-cover="images/covers/cover-30.svg" data-name="The Turtle and the Tide" data-by="Pip Whitlock" data-genre-label="Fable" data-chapter="Slow and Steady Saves the Shore">
+  <div class="book-cover"><img src="images/covers/cover-30.svg" alt="Cover of The Turtle and the Tide" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="30" aria-pressed="false" aria-label="Like The Turtle and the Tide">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Fable</span>
+    <h3 class="book-title">The Turtle and the Tide</h3>
+    <p class="book-author">by Pip Whitlock</p>
+    <p class="book-synopsis">A small turtle is mocked for being slow until a great storm shows the beach what patience can do.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-30-the-turtle-and-the-tide.html">Read Story</a><button class="btn btn-ghost details-btn" type="button" data-id="30">Details</button></div>
+  </div>
+</article>
+    </div>
+    <p class="empty-state" id="emptyState" hidden>No stories match your search. Try a different word or genre.</p>
+  </section>
+
+  <dialog id="bookDialog" class="book-dialog" aria-labelledby="dlgTitle">
+    <button class="dialog-close" id="dialogClose" type="button" aria-label="Close details">&times;</button>
+    <div class="dialog-body">
+      <img id="dlgCover" src="" alt="" width="600" height="900">
+      <div>
+        <span class="genre-tag" id="dlgGenre"></span>
+        <h2 id="dlgTitle"></h2>
+        <p class="book-author" id="dlgAuthor"></p>
+        <p class="dlg-chapter"><strong>Chapter:</strong> <span id="dlgChapter"></span></p>
+        <p id="dlgSynopsis"></p>
+        <a class="btn btn-primary" id="dlgRead" href="#">Read Story</a>
+      </div>
+    </div>
+  </dialog>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-brand">&#128214; StoryNest</p>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="library.html">Library</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <p class="footer-note">&copy; 2026 StoryNest. All stories and illustrations are original works created for the ITE 1 project.</p>
+  </div>
+</footer>
+</body>
+</html>

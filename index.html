@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StoryNest | Read a Whole Story in One Sitting</title>
+  <meta name="description" content="A Wattpad-style storybook library with 30 original single-chapter stories across 30 genres.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">&#128214;</span> StoryNest</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">&#9776;</button>
+    <nav id="mainNav" class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page" class="active">Home</a></li>
+        <li><a href="library.html">Library</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch dark or light mode">&#127769; Dark</button>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">30 stories &middot; 30 genres &middot; one chapter each</p>
+      <h1>Read a whole story<br>in one sitting.</h1>
+      <p class="lead">From haunted buses to dragons who love thunder, StoryNest is a cozy library of original short stories. Pick a cover, tap <em>Read Story</em>, and finish before your tea gets cold.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="library.html">Browse the Library</a>
+        <a class="btn btn-ghost btn-lg" href="stories/story-01-the-lantern-keeper-of-elderfen.html">Start Reading</a>
+      </div>
+    </div>
+    <div class="slideshow" id="slideshow" aria-label="Featured book covers slideshow">
+      <figure class="slide is-active"><a href="stories/story-01-the-lantern-keeper-of-elderfen.html"><img src="images/covers/cover-01.svg" alt="Cover of The Lantern Keeper of Elderfen" width="600" height="900"></a>
+      <figcaption><span class="genre-tag">Fantasy</span><strong>The Lantern Keeper of Elderfen</strong><span>by Mara Quillon</span></figcaption></figure><figure class="slide"><a href="stories/story-02-signal-from-kepler-9.html"><img src="images/covers/cover-02.svg" alt="Cover of Signal from Kepler-9" width="600" height="900"></a>
+      <figcaption><span class="genre-tag">Science Fiction</span><strong>Signal from Kepler-9</strong><span>by Idris Valemont</span></figcaption></figure><figure class="slide"><a href="stories/story-04-the-missing-page.html"><img src="images/covers/cover-04.svg" alt="Cover of The Missing Page" width="600" height="900"></a>
+      <figcaption><span class="genre-tag">Mystery</span><strong>The Missing Page</strong><span>by Oren Blackwood</span></figcaption></figure><figure class="slide"><a href="stories/story-13-the-princess-who-collected-thunder.html"><img src="images/covers/cover-13.svg" alt="Cover of The Princess Who Collected Thunder" width="600" height="900"></a>
+      <figcaption><span class="genre-tag">Fairy Tale</span><strong>The Princess Who Collected Thunder</strong><span>by Rowan Hartley</span></figcaption></figure><figure class="slide"><a href="stories/story-16-the-clockwork-cartographer.html"><img src="images/covers/cover-16.svg" alt="Cover of The Clockwork Cartographer" width="600" height="900"></a>
+      <figcaption><span class="genre-tag">Steampunk</span><strong>The Clockwork Cartographer</strong><span>by Ada Fenwick</span></figcaption></figure>
+      <div class="slide-controls">
+        <button class="slide-btn" id="slidePrev" type="button" aria-label="Previous slide">&#10094;</button>
+        <div class="slide-dots" id="slideDots"></div>
+        <button class="slide-btn" id="slideNext" type="button" aria-label="Next slide">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="featured-h">
+    <div class="section-head">
+      <h2 id="featured-h">Featured Stories</h2>
+      <a class="text-link" href="library.html">See all 30 &rarr;</a>
+    </div>
+    <div class="book-grid">
+      <article class="book-card" data-genre="Fantasy" data-title="the lantern keeper of elderfen" data-author="mara quillon" data-id="01"
+  data-synopsis="Twelve-year-old Wren tends the marsh lantern that holds back the Hollow Mist, until the flame speaks and tells her what the mist really wants." data-href="stories/story-01-the-lantern-keeper-of-elderfen.html" data-cover="images/covers/cover-01.svg" data-name="The Lantern Keeper of Elderfen" data-by="Mara Quillon" data-genre-label="Fantasy" data-chapter="The Last Light of Elderfen">
+  <div class="book-cover"><img src="images/covers/cover-01.svg" alt="Cover of The Lantern Keeper of Elderfen" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="01" aria-pressed="false" aria-label="Like The Lantern Keeper of Elderfen">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Fantasy</span>
+    <h3 class="book-title">The Lantern Keeper of Elderfen</h3>
+    <p class="book-author">by Mara Quillon</p>
+    <p class="book-synopsis">Twelve-year-old Wren tends the marsh lantern that holds back the Hollow Mist, until the flame speaks and tells her what the mist really wants.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-01-the-lantern-keeper-of-elderfen.html">Read Story</a></div>
+  </div>
+</article><article class="book-card" data-genre="Romance" data-title="two umbrellas, one rainy street" data-author="lena marisol" data-id="03"
+  data-synopsis="Every rainy Thursday, Ines and Theo share the same bus stop and pretend not to notice each other, until the day only one umbrella survives the storm." data-href="stories/story-03-two-umbrellas-one-rainy-street.html" data-cover="images/covers/cover-03.svg" data-name="Two Umbrellas, One Rainy Street" data-by="Lena Marisol" data-genre-label="Romance" data-chapter="Thursday, Bus Stop 14">
+  <div class="book-cover"><img src="images/covers/cover-03.svg" alt="Cover of Two Umbrellas, One Rainy Street" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="03" aria-pressed="false" aria-label="Like Two Umbrellas, One Rainy Street">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Romance</span>
+    <h3 class="book-title">Two Umbrellas, One Rainy Street</h3>
+    <p class="book-author">by Lena Marisol</p>
+    <p class="book-synopsis">Every rainy Thursday, Ines and Theo share the same bus stop and pretend not to notice each other, until the day only one umbrella survives the storm.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-03-two-umbrellas-one-rainy-street.html">Read Story</a></div>
+  </div>
+</article><article class="book-card" data-genre="Mystery" data-title="the missing page" data-author="oren blackwood" data-id="04"
+  data-synopsis="When page 114 vanishes from the town library&#x27;s only copy of a centuries-old diary, young librarian Pia must find out who needed it gone." data-href="stories/story-04-the-missing-page.html" data-cover="images/covers/cover-04.svg" data-name="The Missing Page" data-by="Oren Blackwood" data-genre-label="Mystery" data-chapter="Page One Hundred and Fourteen">
+  <div class="book-cover"><img src="images/covers/cover-04.svg" alt="Cover of The Missing Page" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="04" aria-pressed="false" aria-label="Like The Missing Page">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Mystery</span>
+    <h3 class="book-title">The Missing Page</h3>
+    <p class="book-author">by Oren Blackwood</p>
+    <p class="book-synopsis">When page 114 vanishes from the town library&#x27;s only copy of a centuries-old diary, young librarian Pia must find out who needed it gone.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-04-the-missing-page.html">Read Story</a></div>
+  </div>
+</article><article class="book-card" data-genre="Adventure" data-title="compass of the coral coast" data-author="kai navarro" data-id="07"
+  data-synopsis="Siblings Nico and Bea inherit a broken compass that points not north, but toward whatever you miss the most. Their search leads to a drowned lighthouse." data-href="stories/story-07-compass-of-the-coral-coast.html" data-cover="images/covers/cover-07.svg" data-name="Compass of the Coral Coast" data-by="Kai Navarro" data-genre-label="Adventure" data-chapter="The Needle That Pointed Home">
+  <div class="book-cover"><img src="images/covers/cover-07.svg" alt="Cover of Compass of the Coral Coast" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="07" aria-pressed="false" aria-label="Like Compass of the Coral Coast">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Adventure</span>
+    <h3 class="book-title">Compass of the Coral Coast</h3>
+    <p class="book-author">by Kai Navarro</p>
+    <p class="book-synopsis">Siblings Nico and Bea inherit a broken compass that points not north, but toward whatever you miss the most. Their search leads to a drowned lighthouse.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-07-compass-of-the-coral-coast.html">Read Story</a></div>
+  </div>
+</article><article class="book-card" data-genre="Paranormal" data-title="my roommate is a ghost" data-author="tessa moon" data-id="12"
+  data-synopsis="College sophomore Jade finally finds a cheap apartment, only to discover her roommate has been dead since 1974 and has strong opinions about her dishes." data-href="stories/story-12-my-roommate-is-a-ghost.html" data-cover="images/covers/cover-12.svg" data-name="My Roommate Is a Ghost" data-by="Tessa Moon" data-genre-label="Paranormal" data-chapter="The Rent Is Suspiciously Cheap">
+  <div class="book-cover"><img src="images/covers/cover-12.svg" alt="Cover of My Roommate Is a Ghost" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="12" aria-pressed="false" aria-label="Like My Roommate Is a Ghost">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Paranormal</span>
+    <h3 class="book-title">My Roommate Is a Ghost</h3>
+    <p class="book-author">by Tessa Moon</p>
+    <p class="book-synopsis">College sophomore Jade finally finds a cheap apartment, only to discover her roommate has been dead since 1974 and has strong opinions about her dishes.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-12-my-roommate-is-a-ghost.html">Read Story</a></div>
+  </div>
+</article><article class="book-card" data-genre="Western" data-title="dust at redrock junction" data-author="cole harlan" data-id="15"
+  data-synopsis="A tired sheriff, a missing water wagon, and one hot afternoon decide whether Redrock Junction survives the summer." data-href="stories/story-15-dust-at-redrock-junction.html" data-cover="images/covers/cover-15.svg" data-name="Dust at Redrock Junction" data-by="Cole Harlan" data-genre-label="Western" data-chapter="High Noon, Low Water">
+  <div class="book-cover"><img src="images/covers/cover-15.svg" alt="Cover of Dust at Redrock Junction" loading="lazy" width="600" height="900">
+    <button class="like-btn like-mini" type="button" data-like="15" aria-pressed="false" aria-label="Like Dust at Redrock Junction">&#9825;</button>
+  </div>
+  <div class="book-info">
+    <span class="genre-tag">Western</span>
+    <h3 class="book-title">Dust at Redrock Junction</h3>
+    <p class="book-author">by Cole Harlan</p>
+    <p class="book-synopsis">A tired sheriff, a missing water wagon, and one hot afternoon decide whether Redrock Junction survives the summer.</p>
+    <div class="card-actions"><a class="btn btn-primary" href="stories/story-15-dust-at-redrock-junction.html">Read Story</a></div>
+  </div>
+</article>
+    </div>
+  </section>
+
+  <section class="section section-alt" aria-labelledby="genres-h">
+    <h2 id="genres-h">Find Your Genre</h2>
+    <p class="section-sub">Tap a genre to jump straight to matching stories in the library.</p>
+    <div class="chip-row"><a class="chip" href="library.html?genre=Fantasy">Fantasy</a><a class="chip" href="library.html?genre=Science Fiction">Science Fiction</a><a class="chip" href="library.html?genre=Romance">Romance</a><a class="chip" href="library.html?genre=Mystery">Mystery</a><a class="chip" href="library.html?genre=Horror">Horror</a><a class="chip" href="library.html?genre=Thriller">Thriller</a><a class="chip" href="library.html?genre=Adventure">Adventure</a><a class="chip" href="library.html?genre=Historical Fiction">Historical Fiction</a><a class="chip" href="library.html?genre=Comedy">Comedy</a><a class="chip" href="library.html?genre=Drama">Drama</a><a class="chip" href="library.html?genre=Dystopian">Dystopian</a><a class="chip" href="library.html?genre=Paranormal">Paranormal</a><a class="chip chip-more" href="library.html">+ 18 more</a></div>
+  </section>
+
+  <section class="section" aria-labelledby="how-h">
+    <h2 id="how-h">How It Works</h2>
+    <div class="steps">
+      <article class="step"><span class="step-num">1</span><h3>Pick a cover</h3><p>Search by title, author, or genre in the Library.</p></article>
+      <article class="step"><span class="step-num">2</span><h3>Read the story</h3><p>Every book is one complete chapter, with a progress bar to keep you company.</p></article>
+      <article class="step"><span class="step-num">3</span><h3>Like your favorites</h3><p>Tap the heart to save the stories you love. Your likes are remembered.</p></article>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-brand">&#128214; StoryNest</p>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="library.html">Library</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <p class="footer-note">&copy; 2026 StoryNest. All stories and illustrations are original works created for the ITE 1 project.</p>
+  </div>
+</footer>
+</body>
+</html>
